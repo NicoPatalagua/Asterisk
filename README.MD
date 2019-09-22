@@ -182,7 +182,7 @@ On Android, there are many free SIP clients available in the Google Play Store t
 
 ![Image](images/Mizu.png)
 
---------------------------------------------------------------------------------------------
+---
 
 ## Author ✒️
 
