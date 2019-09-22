@@ -23,9 +23,11 @@ lsb_release -a
 ### 1. Update the machine and restart it: 📋
 
 In the terminal, enter the following command:
+
 ```
 sudo apt update
 ```
+
 ![Image](images/1.PNG)
 
 ⚠**NOTE:** _The APT package repository cache should be updated._
@@ -78,16 +80,19 @@ On Ubuntu 18.04 LTS, the Asterisk configuration files are in **/etc/asterisk** d
 ```
 ls /etc/asterisk
 ```
+
 ![Image](images/5.PNG)
 
 ➡ _Configuring Asterisk as a VoIP server and make calls using a SIP client on Android phones. For this to work, I will only modify the sip.conf and extensions.conf configuration files in the /etc/asterisk directory._
 
 ### 5. Configuring Asterisk as a VoIP Server: 📋
+
 First, navigate to the /etc/asterisk directory with the following command:
 
 ```
 cd /etc/asterisk
 ```
+
 Now you should make a backup copy of the sip.conf and extensions.conf file. Because, if you’ve made any major mistakes and you want to revert back to the default sip.conf and extensions.conf file, you will be able to do it if you have a backup copy of these configuration files. You won’t have to re-install Asterisk.
 To make a backup copy of sip.conf file, run the following command:
 
@@ -99,25 +104,29 @@ sudo cp sip.conf sip.conf.backup
 
 
 ➡ _To make a backup copy of extensions.conf file, run the following command:_
+
 ```
 sudo cp extensions.conf extensions.conf.backup
 ```
+
 ![Image](images/7.PNG)
 
 ➡ _Now run the following command to remove all the existing lines from the sip.conf file:_
+
 ```
 echo | sudo tee sip.conf
 ```
+
 ➡ _Now run the following command to open sip.conf file with nano text editor:_
+
 ```
 sudo nano sip.conf
 ```
+
 ![Image](images/8.PNG)
 
 ➡ _And add the following lines to sip.conf file and save the file._
-```
 
-```
 ![Image](images/9.PNG)
 
 ➡ _Here, I created 2 users 1073 and 1023. Their password is set using secret. The password for the user 1073 is 1073, and for the user 1023 is 1023._
@@ -127,6 +136,7 @@ sudo nano sip.conf
 ```
 echo | sudo tee extensions.conf
 ```
+
 ➡ _Then, run the following command to open extensions.conf file with nano text editor:_
 
 ```
@@ -135,9 +145,7 @@ sudo nano extensions.conf
 ![Image](images/10.PNG)
 
 ➡ _Now add the following lines to extensions.conf file and save the file._
-```
 
-```
 ![Image](images/11.PNG)
 
 ➡ _Once you’re done with all the steps above, restart asterisk with the following command:_
@@ -145,6 +153,7 @@ sudo nano extensions.conf
 ```
 sudo systemctl restart asterisk
 ```
+
 ![Image](images/12.PNG)
 
 ➡ _Now check whether the asterisk service is running with the following command:_
@@ -152,7 +161,9 @@ sudo systemctl restart asterisk
 ```
 sudo systemctl status asterisk
 ```
+
 ➡ _As you can see, it is running. So our configuration is working._
+
 ![Image](images/13.PNG)
 
 ➡ _Now run the following command to check the IP address of your Asterisk VoIP server:_
@@ -160,6 +171,7 @@ sudo systemctl status asterisk
 ```
 ip a
 ```
+
 ![Image](images/14.PNG)
 
 _As you can see, the IP address of my Asterisk server is **10.0.2.15/24**. Take a note of this IP address as you will need it when you will connect to your Asterisk server from your Android phone._
