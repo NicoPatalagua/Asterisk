@@ -168,7 +168,7 @@ _As you can see, the IP address of my Asterisk server is **10.0.2.15/24**. Take 
 
 On Android, there are many free SIP clients available in the Google Play Store that you can download and connect to your own Asterisk VoIP server. The one I like is called **MizuDroid**. It is a very simple and easy to use SIP client on Android. You can make calls and send text messages using [MizuDroid](https://play.google.com/store/apps/details?id=com.mizuvoip.mizudroid.app&hl=es_CO).
 
-![Image](images/Mizu.PNG)
+![Image](images/Mizu.png)
 
 --------------------------------------------------------------------------------------------
 
